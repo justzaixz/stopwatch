@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zain's Stopwatch</title>
+  <link rel="stylesheet" href="stopwatch.css">
+  <style>
+    /* CSS for positioning the h2 element */
+    h2 {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "Poppins", sans-serif;
+      color: black;
+    }
+    
+    /* Style for the box */
+    .stopwatch-box {
+      position: relative;
+      width: 500px; /* Adjust width as needed */
+      height: auto; /* Let height adjust based on content */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      overflow: hidden; /* Ensure the overlay doesn't spill out of the container */
+    }
+
+    /* Style for the image */
+    .stopwatch-image {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1; /* Ensure it's below the content */
+      filter: brightness(70%); /* Adjust brightness */
+    }
+
+    /* Style for the back to home button */
+    #backToHomeButton {
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      width: 150px;
+      height: 40px;
+      font-size: 16px;
+      background-color: white;
+      border: 1px solid black;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body style="background-image: url('https://wallpapers.com/images/featured/palm-tree-beach-1nbtfz437xmtvtt0.jpg');">
+
+  <div class="stopwatch-box"> <!-- New container for the stopwatch -->
+    <div class="timer-display">
+      00 : 00 : 00 : 000
+    </div>
+    <div class="buttons">
+        <button id="start-timer">Start</button>
+        <button id="pause-timer">Pause</button>
+        <button id="reset-timer">Reset</button>
+    </div>
+  </div>
+  
+  <!-- Back to Home button -->
+  <input type="button" value="Back to Home" id="backToHomeButton" onclick="goToHome()">
+  
+  <script src="stopwatch.js"></script>
+  <script>
+    function goToHome() {
+      window.location.href = "file:///C:/Users/zaind/OneDrive/Documents/My%20System/systemhtml.html";
+    }
+  </script>
+</body>
+</html>
